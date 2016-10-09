@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Welcome to my blog.">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="generator" content="Hugo 0.17" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="http://hugo.homfen.me/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="alternate" href="http://hugo.homfen.me/index.xml" type="application/rss+xml" title="Homfen&#39;s blog">
+<title>其他技术 - Homfen&#39;s blog</title>
+</head>
+<body>
+
+<header>
+  <div class="container clearfix">
+    <a class="path" href="http://hugo.homfen.me/">[Homfen&#39;s blog]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<main role="main" class="article-list">
+  <h1 class="list-title">其他技术</h1>
+  
+    
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2014/02/19/kobold2d-and-xcode5/">Kobold2D and XCode5</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2014-02-19">February 19, 2014</time></span>
+
+  </div>
+  <section class="summary">
+    用Xcode新建Kobold2D项目时，报错：
+int newSize = [(SingleFileDownloader*)[_sizeCheckers objectAtIndex: _curFile] contentLength];  Multiple methods named &lsquo;contentLength&rsquo;
+解决方法，打开终端，输入：
+curl https://s3.amazonaws.com/mgwu-misc/xcode5-kobold.sh | sh   
+  </section>
+</article>
+
+  
+    
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2014/02/10/button-and-drawable/">Button and Drawable</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2014-02-10">February 10, 2014</time></span>
+
+  </div>
+  <section class="summary">
+    如何获取Button中的Drawable
+Drawable img1 = button.getCompoundDrawables()[0];  与其他Drawable比较
+Drawable img2 = getResources().getDrawable(R.drawable.name); Bitmap bitmap1 = ((BitmapDrawable)img1).getBitmap(); Bitmap bitmap2 = ((BitmapDrawable)img2).getBitmap(); if(bitmap1==bitmap2){ ... }   
+  </section>
+</article>
+
+  
+    
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2014/01/22/oh-my-zsh%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">oh-my-zsh安装配置</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2014-01-22">January 22, 2014</time></span>
+
+  </div>
+  <section class="summary">
+    <!--img src="/images/post/oh-my-zsh.png"-->
+
+<p>看了mac君关于zsh的文章“终极Shell”(<a href="http://macshuo.com/?p=676" target="_blank">查看原文</a>)，一步步操作下来 设置默认使用zsh</p>
+
+<pre><code class="language-shell">chsh -s /bin/zsh
+</code></pre>
+
+<p></p>  <a href="/2014/01/22/oh-my-zsh%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">Read More...</a>
+  </section>
+</article>
+
+  
+    
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2013/12/02/blank-page-on-android-application-startup/">Blank page on android application startup</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2013-12-02">December 02, 2013</time></span>
+
+  </div>
+  <section class="summary">
+    现象： 打开应用时先出现1秒左右的带有标题的空白页面，然后进入LAUNCHER Activity
+原因分析： 在自定义的主题中，设置的父主题，如：
+&lt;style name=&quot;customTheme&quot; parent=&quot;android:Theme.Light&quot;&gt;  解决方法： 将主题设置为android:Theme.Wallpaper
+&lt;style name=&quot;customTheme&quot; parent=&quot;android:Theme.Wallpaper&quot;&gt;   
+  </section>
+</article>
+
+  
+    
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2013/11/16/mac%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%88%B6%E4%BD%9C/">Mac音乐播放器制作</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2013-11-16">November 16, 2013</time></span>
+
+  </div>
+  <section class="summary">
+    <p>这是大学毕业设计做的东西，论文加编码差不多1个月时间，实际上编码时间只有两个星期不到，由于当时已经在实习，所以就请了一个星期的假，用来写代码，一个星期下来，基本上功能就已经完成，之后一个星期便是利用下班后的时间做点小的修改，然后就答辩了，所以说，毕业设计也不难，只要你用心去做。 由于之前看过一点Objective-C的基础知识，所以就直接开始编程了。虽然看看书，语法掌握很简单，但是还是有很多东西是不懂的，就拿Xcode来说吧，和VS就完全不同了。不懂的时候，就查官方文档，苹果的文档还是很不错的，上面的列子可以直接下载下来运行。</p>  <a href="/2013/11/16/mac%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%88%B6%E4%BD%9C/">Read More...</a>
+  </section>
+</article>
+
+  
+</main>
+
+</div>
+
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2014  Homfen&#39;s blog - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+  </div>
+</footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ea23518b0514a7b24922188359137040";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>
+

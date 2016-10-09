@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Welcome to my blog.">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="generator" content="Hugo 0.17" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="http://hugo.homfen.me/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="alternate" href="http://hugo.homfen.me/index.xml" type="application/rss+xml" title="Homfen&#39;s blog">
+<title>Duff&#39;s Device（达夫设备） - Homfen&#39;s blog</title>
+</head>
+<body>
+
+<header>
+  <div class="container clearfix">
+    <a class="path" href="http://hugo.homfen.me/">[Homfen&#39;s blog]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+
+<main role="main" class="article">
+  
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta">
+
+
+    <span class="key">published in</span>
+    <span class="val">
+
+        <a href="http://hugo.homfen.me/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF">前端技术</a>
+
+    </span>
+
+
+    <br>
+    <span class="key">tags:</span>
+    <span class="val">
+
+        <a href="http://hugo.homfen.me/tags/javascript">Javascript</a>
+
+    </span>
+
+  </div>
+  <h1 class="headline" itemprop="headline">Duff&#39;s Device（达夫设备）</h1>
+  <section class="body" itemprop="articleBody">
+    <p>达夫设备算法可以减少循环的迭代次数，如果循环迭代次数少于1000次，你可能只能看到它与普通循环相比微不足道的性能提升，但当循环迭代次数超过1000次，达夫设备的效率将显著提升。<br />
+原理十分简单，将总的迭代次数以8为基数进行分组，一次迭代执行8次操作，最后再处理余下的小于8次的迭代，所以迭代的总次数由原来的count次变为count/8[+1]次。</p>
+
+<p></p>
+
+<p>第一种形式：</p>
+
+<pre><code class="language-javascript">function duffLoop(items,process){
+    var iterations = Math.floor(items.length / 8), 
+        startAt = items.length % 8,
+        i = 0;
+    do {
+        switch(startAt){
+            case 0: process(items[i++]); 
+            case 7: process(items[i++]); 
+            case 6: process(items[i++]); 
+            case 5: process(items[i++]); 
+            case 4: process(items[i++]); 
+            case 3: process(items[i++]); 
+            case 2: process(items[i++]); 
+            case 1: process(items[i++]);
+        }
+        startAt = 0;
+    } while (--iterations);
+}
+</code></pre>
+
+<p>第二种形式：</p>
+
+<pre><code class="language-javascript">function duffLoop(items,process){
+    var i = items.length-1;
+    var ii = items.length % 8; 
+    while(ii--){
+        process(items[i--]); 
+    }
+    var iii = Math.floor(items.length / 8); 
+    while(iii--){
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]);
+    }
+}
+</code></pre>
+
+<p>第三种形式：</p>
+
+<pre><code class="language-javascript">function duffLoop(items, process){
+    var idx = 0;
+    var len = items.length;
+    var itr = len / 8;
+    while (itr--) {
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+    }
+    itr = len % 8;
+    while (itr--) {
+        process(items[idx++]);
+    }
+}
+</code></pre>
+  </section>
+  <section class="body" style="margin-top: 2rem;">
+
+<div class="ds-thread" data-thread-key="Duff&#39;s Device（达夫设备）" data-title="Duff&#39;s Device（达夫设备）" data-url="http://hugo.homfen.me/0001/01/01Duff%27s%20Device%ef%bc%88%e8%be%be%e5%a4%ab%e8%ae%be%e5%a4%87%ef%bc%89"></div>
+
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"homfenblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+
+  </section>
+</article>
+
+</main>
+
+
+</div>
+
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2016 Homfen&#39;s blog - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+  </div>
+</footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ea23518b0514a7b24922188359137040";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>
+

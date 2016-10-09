@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homfen&#39;s blog</title>
+    <link>http://hugo.homfen.me/tags/express.js/index.xml</link>
+    <description>Recent content on Homfen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://hugo.homfen.me/tags/express.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>关于此博客</title>
+      <link>http://hugo.homfen.me/2015/10/04/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 04 Oct 2015 00:30:26 +0000</pubDate>
+      
+      <guid>http://hugo.homfen.me/2015/10/04/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;之前的博客是放在ixwebhosting上的，当时是同学推荐才用了这个，两年的空间500多，再加上域名的费用差不多每年300多吧。为什么要换呢？ixwebhosting优点很明显，不用备案，无限流量无限空间，但是就因为是国外的，所以网络不是很稳定，连接ftp会经常断开，在一些垃圾网络下甚至连都连不上，比如长城宽带（虽然价格便宜，但是实在是烂，所以买宽带一定要买电信、联通这些大的）。其次只能使用ftp上传代码，没有git、svn，上传代码会很麻烦。默认是php环境（好像还有ruby什么的），虽然php是全宇宙最好的语言，但是像我这种只会简单的使用，要做个功能还要查好几次手册才行，脑子不够用啊。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;那么要换到哪家呢？国内的也挺多的，新浪、百度、阿里、腾讯都有，之前是准备在新浪上搞的，因为新浪的支持python，但是文档实在是不完整，自己摸索了很久才搞定，用的是flask（感觉循环引用看着很不爽），SAE在连接mysql数据库这块，有很多限制，一不小心就会“MySQL server has gone away”，原因在连接上面，只要设置一个timeout就可以了，但还是偶尔会连不上，刷新一次就好了。SAE使用mysql是要消耗云豆的，如果调用次数太多的话，数量还是挺可观的（因为有次把sql查询写在了while里面，然后你懂的，几分钟就消耗了一千多吧，还好系统检测就把应用暂时关了，吓死宝宝了）。阿里和腾讯的，主要考虑的是价格，穷屌丝用不起啊，阿里免费试用了一个，因为没备案被回收了，回收回收吧，谁让免费的只能用php呢。百度BAE之前也玩过，因为后来收费了所以不玩了，现在反正要迁移到国内，花点钱也无所谓，况且一天只要4毛钱，一年也才146，最重要的是支持nodejs和git，就它了。&lt;/p&gt;
+
+&lt;p&gt;如果图方便的话，可以直接使用hexo或者ghost，但是像我这种爱折腾的，还是直接用express自己写吧。基本架构就定好了，nodejs＋express＋mongodb，稍微说下过程中遇到的坑吧。做登陆功能的时候，想用RSA加密，可选的包有ursa、node-rsa两个，但是用ursa的时候，本地可行，传上去就报错，所以只能用node-rsa了。其次，rsa还要设置&lt;strong&gt;encryption scheme&lt;/strong&gt;为“pkcs1”，因为jsencrypt.js默认就是使用“pkcs1”的。另外一个坑，使用nodejs连接mongodb的话，就要用到“mongoose”这个包，既可以用回调的方式，也可以用promise，如果要用promise的话，必须要调用exec方法才会返回promise对象，如果用回调的话，一不小心就回调嵌套了。还有一点就是关于&lt;strong&gt;MongoId&lt;/strong&gt;，mongodb的每条数据都会有一个MongoId，如果要通过这个MongoId进行操作的话，在mongoose里面就必须&lt;strong&gt;require(&amp;lsquo;mongoose&amp;rsquo;).Types.ObjectId&lt;/strong&gt;这个构造函数。最后，mongoose只需要在初始化的时候连接一次数据库就可以了，不用每次操作都去连接数据库，关闭连接。&lt;/p&gt;
+
+&lt;p&gt;因为距离码这些代码已经差不多一个月了，所以只想到这些问题，等过几天备案通过，就可以绑定域名啦。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

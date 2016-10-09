@@ -1,3 +1,26 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
-title = "My New Hugo Site"
+baseurl = "http://hugo.homfen.me/"
+title = "Homfen's blog"
 languageCode = "en-us"
+theme = "base16"
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
+    page = "/:title/"
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+[[menu.main]]
+    name = "GitHub"
+    url = ""
+[[menu.main]]
+    name = "Twitter"
+    url = ""
+
+[params]
+    description = "Welcome to my blog."
+
+    [params.logo]
+    url = "logo.png"
+    width = 50
+    height = 50

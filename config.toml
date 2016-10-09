@@ -1,4 +1,4 @@
-baseurl = "http://hugo.homfen.me/"
+baseurl = "http://blog.homfen.me/"
 title = "Homfen's blog"
 languageCode = "en-us"
 theme = "base16"

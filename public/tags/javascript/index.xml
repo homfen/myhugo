@@ -162,10 +162,10 @@ r = function(){
     
     <item>
       <title>Duff&#39;s Device（达夫设备）</title>
-      <link>http://blog.homfen.me/1/01/01/duffs-device%E8%BE%BE%E5%A4%AB%E8%AE%BE%E5%A4%87/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>http://blog.homfen.me/2014/06/14/duffs-device%E8%BE%BE%E5%A4%AB%E8%AE%BE%E5%A4%87/</link>
+      <pubDate>Sat, 14 Jun 2014 16:42:18 +0000</pubDate>
       
-      <guid>http://blog.homfen.me/1/01/01/duffs-device%E8%BE%BE%E5%A4%AB%E8%AE%BE%E5%A4%87/</guid>
+      <guid>http://blog.homfen.me/2014/06/14/duffs-device%E8%BE%BE%E5%A4%AB%E8%AE%BE%E5%A4%87/</guid>
       <description>&lt;p&gt;达夫设备算法可以减少循环的迭代次数，如果循环迭代次数少于1000次，你可能只能看到它与普通循环相比微不足道的性能提升，但当循环迭代次数超过1000次，达夫设备的效率将显著提升。&lt;br /&gt;
 原理十分简单，将总的迭代次数以8为基数进行分组，一次迭代执行8次操作，最后再处理余下的小于8次的迭代，所以迭代的总次数由原来的count次变为count/8[+1]次。&lt;/p&gt;
 

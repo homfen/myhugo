@@ -733,6 +733,85 @@ r = function(){
     </item>
     
     <item>
+      <title>Duff&#39;s Device（达夫设备）</title>
+      <link>http://blog.homfen.me/2014/06/14/duffs-device%E8%BE%BE%E5%A4%AB%E8%AE%BE%E5%A4%87/</link>
+      <pubDate>Sat, 14 Jun 2014 16:42:18 +0000</pubDate>
+      
+      <guid>http://blog.homfen.me/2014/06/14/duffs-device%E8%BE%BE%E5%A4%AB%E8%AE%BE%E5%A4%87/</guid>
+      <description>&lt;p&gt;达夫设备算法可以减少循环的迭代次数，如果循环迭代次数少于1000次，你可能只能看到它与普通循环相比微不足道的性能提升，但当循环迭代次数超过1000次，达夫设备的效率将显著提升。&lt;br /&gt;
+原理十分简单，将总的迭代次数以8为基数进行分组，一次迭代执行8次操作，最后再处理余下的小于8次的迭代，所以迭代的总次数由原来的count次变为count/8[+1]次。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;第一种形式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function duffLoop(items,process){
+    var iterations = Math.floor(items.length / 8), 
+        startAt = items.length % 8,
+        i = 0;
+    do {
+        switch(startAt){
+            case 0: process(items[i++]); 
+            case 7: process(items[i++]); 
+            case 6: process(items[i++]); 
+            case 5: process(items[i++]); 
+            case 4: process(items[i++]); 
+            case 3: process(items[i++]); 
+            case 2: process(items[i++]); 
+            case 1: process(items[i++]);
+        }
+        startAt = 0;
+    } while (--iterations);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;第二种形式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function duffLoop(items,process){
+    var i = items.length-1;
+    var ii = items.length % 8; 
+    while(ii--){
+        process(items[i--]); 
+    }
+    var iii = Math.floor(items.length / 8); 
+    while(iii--){
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]); 
+        process(items[i--]);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;第三种形式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function duffLoop(items, process){
+    var idx = 0;
+    var len = items.length;
+    var itr = len / 8;
+    while (itr--) {
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+        process(items[idx++]);
+    }
+    itr = len % 8;
+    while (itr--) {
+        process(items[idx++]);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
       <title>Chrome插件开发</title>
       <link>http://blog.homfen.me/2014/04/07/chrome%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 07 Apr 2014 20:22:55 +0000</pubDate>
@@ -969,42 +1048,6 @@ if(bitmap1==bitmap2){
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>oh-my-zsh安装配置</title>
-      <link>http://blog.homfen.me/2014/01/22/oh-my-zsh%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Wed, 22 Jan 2014 23:21:32 +0000</pubDate>
-      
-      <guid>http://blog.homfen.me/2014/01/22/oh-my-zsh%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;!--img src=&#34;http://blog.homfen.me/images/post/oh-my-zsh.png&#34;--&gt;
-
-&lt;p&gt;看了mac君关于zsh的文章“终极Shell”(&lt;a href=&#34;http://macshuo.com/?p=676&#34; target=&#34;_blank&#34;&gt;查看原文&lt;/a&gt;)，一步步操作下来 设置默认使用zsh&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;chsh -s /bin/zsh
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;然后安装「oh my zsh」&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;配置.zshrc 用vim打开.zshrc文件，找到&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;# Example aliases
-# alias zshconfig=&amp;quot;mate ~/.zshrc&amp;quot;
-# alias ohmyzsh=&amp;quot;mate ~/.oh-my-zsh&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在后面添加自己的配置即可 补充一下，如何设置TextMate的环境变量&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo ln -s /Applications/TextMate.app/Contents/Resources/mate /usr/local/bin/mate
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;这样就可以在终端中用mate命令打开TextMate了&lt;/p&gt;</description>
     </item>
     
   </channel>

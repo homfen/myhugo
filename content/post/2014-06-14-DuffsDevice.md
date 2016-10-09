@@ -1,6 +1,6 @@
 +++
 title = "Duff's Device（达夫设备）"
-date = " 2014-06-14T16:42:18Z"
+date = "2014-06-14T16:42:18Z"
 categories = [
     "前端技术"
 ]

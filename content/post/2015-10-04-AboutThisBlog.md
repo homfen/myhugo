@@ -1,6 +1,7 @@
 +++
 title = "关于此博客"
 date = "2015-10-04T00:30:26Z"
+draft = true
 categories = [
     "随笔一篇"
 ]

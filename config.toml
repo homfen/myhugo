@@ -1,7 +1,7 @@
 baseurl = "http://blog.homfen.me/"
 title = "Homfen's blog"
 languageCode = "en-us"
-theme = "base16"
+theme = "hugo-base16-theme"
 
 [permalinks]
     post = "/:year/:month/:day/:title/"

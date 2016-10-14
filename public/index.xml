@@ -27,6 +27,8 @@ local_enable=YES
 chroot_local_user=YES
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;!-- more --&gt;
+
 &lt;p&gt;添加用户并指定目录，设置密码：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;useradd –s /sbin/nologin –d /var/www/ username

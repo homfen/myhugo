@@ -26,7 +26,7 @@ local_enable=YES
 chroot_local_user=YES
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;!-- more --&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;添加用户并指定目录，设置密码：&lt;/p&gt;
 
@@ -52,8 +52,7 @@ passwd username
 &lt;li&gt;登录类型选择“正常”&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;over，现在能用FileZilla上传文件到服务器了&lt;/p&gt;
-</description>
+&lt;p&gt;over，现在能用FileZilla上传文件到服务器了&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -64,33 +64,36 @@
 <pre><code class="language-shell">sudo yum install vsftpd
 </code></pre>
 
-<p>安装完毕后修改<em>/etc/vsftpd/vsftpd.conf</em>:</p>
+<p>安装完毕后修改*/etc/vsftpd/vsftpd.conf*：</p>
 
 <pre><code class="language-yml">anonymous_enable=NO
 local_enable=YES
 chroot_local_user=YES
 </code></pre>
 
-<p>添加用户并指定目录，设置密码</p>
+<p>添加用户并指定目录，设置密码：</p>
 
 <pre><code class="language-shell">useradd –s /sbin/nologin –d /var/www/ username
 passwd username
 </code></pre>
 
-<p>修改目录的权限</p>
+<p>修改目录的权限：</p>
 
 <pre><code class="language-shell">chmod -R 777 /var/www
 </code></pre>
 
-<p>重启vsftpd服务</p>
+<p>重启vsftpd服务:</p>
 
 <pre><code class="language-shell">systemctl restart vsftpd
 </code></pre>
 
-<p>FileZilla中的设置：
-1. 端口默认
-2. 加密选择“只使用普通FTP（不安全）”
-3. 登录类型选择“正常”</p>
+<p>FileZilla中的设置：</p>
+
+<ol>
+<li>端口默认</li>
+<li>加密选择“只使用普通FTP（不安全）”</li>
+<li>登录类型选择“正常”</li>
+</ol>
 
 <p>over，现在能用FileZilla上传文件到服务器了</p>
 

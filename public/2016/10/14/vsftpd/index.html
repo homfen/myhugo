@@ -61,12 +61,12 @@
   <section class="body" itemprop="articleBody">
     <p>在CentOS上安装vsftpd：</p>
 
-<pre><code class="language-shell">sudo yum install vsftpd
+<pre><code class="language-bash">sudo yum install vsftpd
 </code></pre>
 
 <p>安装完毕后修改<code>/etc/vsftpd/vsftpd.conf</code>：</p>
 
-<pre><code class="language-yml">anonymous_enable=NO
+<pre><code class="language-yaml">anonymous_enable=NO
 local_enable=YES
 chroot_local_user=YES
 </code></pre>
@@ -75,18 +75,18 @@ chroot_local_user=YES
 
 <p>添加用户并指定目录，设置密码：</p>
 
-<pre><code class="language-shell">useradd –s /sbin/nologin –d /var/www/ username
+<pre><code class="language-bash">useradd –s /sbin/nologin –d /var/www/ username
 passwd username
 </code></pre>
 
 <p>修改目录的权限：</p>
 
-<pre><code class="language-shell">chmod -R 777 /var/www
+<pre><code class="language-bash">chmod -R 777 /var/www
 </code></pre>
 
 <p>重启vsftpd服务:</p>
 
-<pre><code class="language-shell">systemctl restart vsftpd
+<pre><code class="language-bash">systemctl restart vsftpd
 </code></pre>
 
 <p>FileZilla中的设置：</p>

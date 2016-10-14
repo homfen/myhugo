@@ -16,12 +16,12 @@
       <guid>http://blog.homfen.me/2016/10/14/vsftpd/</guid>
       <description>&lt;p&gt;在CentOS上安装vsftpd：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo yum install vsftpd
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo yum install vsftpd
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;安装完毕后修改&lt;code&gt;/etc/vsftpd/vsftpd.conf&lt;/code&gt;：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;anonymous_enable=NO
+&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;anonymous_enable=NO
 local_enable=YES
 chroot_local_user=YES
 &lt;/code&gt;&lt;/pre&gt;
@@ -30,18 +30,18 @@ chroot_local_user=YES
 
 &lt;p&gt;添加用户并指定目录，设置密码：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;useradd –s /sbin/nologin –d /var/www/ username
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;useradd –s /sbin/nologin –d /var/www/ username
 passwd username
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;修改目录的权限：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;chmod -R 777 /var/www
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod -R 777 /var/www
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;重启vsftpd服务:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;systemctl restart vsftpd
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl restart vsftpd
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;FileZilla中的设置：&lt;/p&gt;

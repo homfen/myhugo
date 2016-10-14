@@ -53,6 +53,27 @@
     
       
 <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2016/10/14/vsftpd/">vsftpd</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2016-10-14">October 14, 2016</time></span>
+
+  </div>
+  <section class="summary">
+    在CentOS上安装vsftpd：
+sudo yum install vsftpd  安装完毕后修改/etc/vsftpd/vsftpd.conf:
+anonymous_enable=NO local_enable=YES chroot_local_user=YES  添加用户并指定目录，设置密码
+useradd –s /sbin/nologin –d /var/www/ username passwd username  修改目录的权限
+chmod -R 777 /var/www  重启vsftpd服务
+systemctl restart vsftpd  FileZilla中的设置： 1. 端口默认 2. 加密选择“只使用普通FTP（不安全）” 3. 登录类型选择“正常”
+over，现在能用FileZilla上传文件到服务器了 
+  </section>
+</article>
+
+    
+      
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
   <h2 class="headline" itemprop="headline"><a href="/2016/03/26/immutable%E5%92%8Cjavascript/">Immutable和JavaScript</a></h2>
   <div class="meta">
 
@@ -91,27 +112,6 @@
 </article>
 
     
-      
-<article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/2015/03/10/snap.svg/">Snap.svg</a></h2>
-  <div class="meta">
-
-    <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2015-03-10">March 10, 2015</time></span>
-
-  </div>
-  <section class="summary">
-    <!--img src="/images/post/snap_marquee_hero-1024x517.png"/-->
-
-<p>svg是建立交互性、并有分辨率无关的矢量图形的好方法，而snap.svg可以像jQuery操作Dom一样方便的操作svg图形。</p>
-
-<p>Snap.svg的官方网站是<a href="http://snapsvg.io/" target="_blank">snapsvg.io</a>,个人感觉上的文档写得并不好，随便把所有的方法都列出来了，但是很多看完并不知道如何使用，参数应该怎么传，所以下面就介绍一下一些常用的方法。</p>
-
-<p></p>  <a href="/2015/03/10/snap.svg/">Read More...</a>
-  </section>
-</article>
-
-    
   </div>
 
 
@@ -122,7 +122,7 @@
     
     <h2 class="category">
       <a href="http://blog.homfen.me/categories/%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF">其他技术</a>
-      <small>(5)</small>
+      <small>(6)</small>
     </h2>
     
     <h2 class="category">
@@ -153,6 +153,11 @@
     <span class="tag">
       <a href="http://blog.homfen.me/tags/android">android</a>
       <small>(2)</small>
+    </span>
+    
+    <span class="tag">
+      <a href="http://blog.homfen.me/tags/centos">centos</a>
+      <small>(1)</small>
     </span>
     
     <span class="tag">
@@ -222,6 +227,11 @@
     
     <span class="tag">
       <a href="http://blog.homfen.me/tags/vim">vim</a>
+      <small>(1)</small>
+    </span>
+    
+    <span class="tag">
+      <a href="http://blog.homfen.me/tags/vsftpd">vsftpd</a>
       <small>(1)</small>
     </span>
     

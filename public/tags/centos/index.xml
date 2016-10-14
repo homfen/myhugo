@@ -19,7 +19,7 @@
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo yum install vsftpd
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;安装完毕后修改*/etc/vsftpd/vsftpd.conf*：&lt;/p&gt;
+&lt;p&gt;安装完毕后修改&lt;code&gt;/etc/vsftpd/vsftpd.conf&lt;/code&gt;：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;anonymous_enable=NO
 local_enable=YES

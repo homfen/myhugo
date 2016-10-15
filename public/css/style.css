@@ -520,6 +520,23 @@ article.single pre {
     overflow: hidden;
 }
 
+.headline {
+    position: relative;
+}
+
+.headline .meta {
+    font-size: 16px;
+    line-height: 1.8rem;
+}
+
+h1.headline .meta {
+    text-align: right;
+}
+
+.headline .meta a {
+    color: #6699cc;
+}
+
 code::-webkit-scrollbar {
     height: 8px;
 }

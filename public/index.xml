@@ -6,8 +6,38 @@
     <description>Recent content on Homfen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Oct 2016 23:02:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Oct 2016 22:13:44 +0000</lastBuildDate>
     <atom:link href="http://blog.homfen.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Express.js Get Client IP</title>
+      <link>http://blog.homfen.me/2016/10/19/express.js-get-client-ip/</link>
+      <pubDate>Wed, 19 Oct 2016 22:13:44 +0000</pubDate>
+      
+      <guid>http://blog.homfen.me/2016/10/19/express.js-get-client-ip/</guid>
+      <description>&lt;p&gt;Express中如果想获取客户端的IP，首先要设置trust proxy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;app.set(&#39;trust proxy&#39;, 1);
+// or
+app.enable(&#39;trust proxy&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;设置完之后，就可以从req中取到IP了：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var ip = req.ip;
+// or
+ip = req.headers[&#39;x-forwarded-for&#39;] || req.connection.remoteAddress;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;如果这样还不能获取到IP，比如获取到的是“:::ffff:x.x.x.x”这样的IP，那么大概就是代理搞得鬼了。比如nginx，如果没有配置，那么这些信息在转发的时候就都丢失了，只需要加上这几句：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header Host $http_host;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>vsftpd</title>
@@ -1053,29 +1083,6 @@ tomcat version:6.0.x -------&amp;gt; java version:5 and later
 &lt;p&gt;解决方法，打开终端，输入：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;curl https://s3.amazonaws.com/mgwu-misc/xcode5-kobold.sh | sh
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Button and Drawable</title>
-      <link>http://blog.homfen.me/2014/02/10/button-and-drawable/</link>
-      <pubDate>Mon, 10 Feb 2014 00:16:34 +0000</pubDate>
-      
-      <guid>http://blog.homfen.me/2014/02/10/button-and-drawable/</guid>
-      <description>&lt;p&gt;如何获取Button中的Drawable&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Drawable img1 = button.getCompoundDrawables()[0];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;与其他Drawable比较&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Drawable img2 = getResources().getDrawable(R.drawable.name);
-Bitmap bitmap1 = ((BitmapDrawable)img1).getBitmap();
-Bitmap bitmap2 = ((BitmapDrawable)img2).getBitmap();
-if(bitmap1==bitmap2){
-    ...     
-}
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

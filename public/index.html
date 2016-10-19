@@ -58,6 +58,35 @@
     
       
 <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2016/10/19/express.js-get-client-ip/">Express.js Get Client IP</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2016-10-19">October 19, 2016</time></span>
+
+  </div>
+  <section class="summary">
+    <p>Express中如果想获取客户端的IP，首先要设置trust proxy:</p>
+
+<pre><code class="language-javascript">app.set('trust proxy', 1);
+// or
+app.enable('trust proxy');
+</code></pre>
+
+<p>设置完之后，就可以从req中取到IP了：</p>
+
+<pre><code class="language-javascript">var ip = req.ip;
+// or
+ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+</code></pre>
+
+<p></p>  <a href="/2016/10/19/express.js-get-client-ip/">Read More...</a>
+  </section>
+</article>
+
+    
+      
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
   <h2 class="headline" itemprop="headline"><a href="/2016/10/14/vsftpd/">vsftpd</a></h2>
   <div class="meta">
 
@@ -104,25 +133,6 @@ chroot_local_user=YES
 </article>
 
     
-      
-<article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/2015/08/16/vim%E4%B8%AD%E4%BD%BF%E7%94%A8yui-compressor/">vim中使用yui compressor</a></h2>
-  <div class="meta">
-
-    <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2015-08-16">August 16, 2015</time></span>
-
-  </div>
-  <section class="summary">
-    <!--img src="/images/post/201508171439741627750219.png"-->
-
-<p>对于JS和CSS来说，压缩是很常见的操作，通过压缩可以缩小文件尺寸，从而网页加快加载速度。yahoo的yui compressor是一个常用的压缩工具，所以本文就介绍下如何在vim中使用yui compressor。</p>
-
-<p></p>  <a href="/2015/08/16/vim%E4%B8%AD%E4%BD%BF%E7%94%A8yui-compressor/">Read More...</a>
-  </section>
-</article>
-
-    
   </div>
 
 
@@ -143,7 +153,7 @@ chroot_local_user=YES
     
     <h2 class="category">
       <a href="http://blog.homfen.me/categories/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF">后端技术</a>
-      <small>(1)</small>
+      <small>(2)</small>
     </h2>
     
     <h2 class="category">
@@ -177,6 +187,11 @@ chroot_local_user=YES
     </span>
     
     <span class="tag">
+      <a href="http://blog.homfen.me/tags/express.js">express.js</a>
+      <small>(1)</small>
+    </span>
+    
+    <span class="tag">
       <a href="http://blog.homfen.me/tags/immutable">immutable</a>
       <small>(1)</small>
     </span>
@@ -193,6 +208,16 @@ chroot_local_user=YES
     
     <span class="tag">
       <a href="http://blog.homfen.me/tags/mac">mac</a>
+      <small>(1)</small>
+    </span>
+    
+    <span class="tag">
+      <a href="http://blog.homfen.me/tags/nginx">nginx</a>
+      <small>(1)</small>
+    </span>
+    
+    <span class="tag">
+      <a href="http://blog.homfen.me/tags/node.js">node.js</a>
       <small>(1)</small>
     </span>
     

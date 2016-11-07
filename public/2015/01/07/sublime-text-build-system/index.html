@@ -87,22 +87,20 @@
 <p>将文件保存为AjaxMin.sublime-build，重启Sublime，就可以看到我们自定义的Build System了：tools-&gt;Build System-&gt;AjaxMin。勾选它成为默认的build方案，这时候随意打开一个js文件，并在它的同级目录下新建一个files.xml文件，然后Ctrl+B快捷键进行编译，就可以在上级目录下发现多了一个minjs目录，里面有压缩过的js文件。</p>
   </section>
   <section class="body" style="margin-top: 2rem;">
-
-<div class="ds-thread" data-thread-key="Sublime Text Build System" data-title="Sublime Text Build System" data-url="http://blog.homfen.me/2015/01/07/Sublime%20Text%20Build%20System"></div>
-
-
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"homfenblog"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_config = function () {
+        this.page.url = 'http:\/\/blog.homfen.me\/2015\/01\/07/Sublime Text Build System';
+        this.page.identifier = 'Sublime Text Build System';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = '//homfensblog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </section>
 </article>
 

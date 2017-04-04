@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.homfen.me/</loc>
-    <lastmod>2016-10-19T22:13:44+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://blog.homfen.me/2016/10/19/express.js-get-client-ip/</loc>
     <lastmod>2016-10-19T22:13:44+00:00</lastmod>
   </url>
@@ -104,6 +99,178 @@
   <url>
     <loc>http://blog.homfen.me/2013/11/16/mac%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E5%88%B6%E4%BD%9C/</loc>
     <lastmod>2013-11-16T12:13:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/android/</loc>
+    <lastmod>2014-02-10T00:16:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/centos/</loc>
+    <lastmod>2016-10-14T23:02:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/chrome/</loc>
+    <lastmod>2014-04-07T20:22:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/express/index.js/</loc>
+    <lastmod>2016-10-19T22:13:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/</loc>
+    <lastmod>2016-10-19T22:13:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/immutable/</loc>
+    <lastmod>2016-03-26T23:12:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/javascript/</loc>
+    <lastmod>2014-12-10T00:20:58+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/kobold2d/</loc>
+    <lastmod>2014-02-19T02:08:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/mac/</loc>
+    <lastmod>2013-11-16T12:13:52+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/nginx/</loc>
+    <lastmod>2016-10-19T22:13:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/node/index.js/</loc>
+    <lastmod>2016-10-19T22:13:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/oh-my-zsh/</loc>
+    <lastmod>2014-01-22T23:21:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/polymer/</loc>
+    <lastmod>2014-10-22T01:34:13+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/post/</loc>
+    <lastmod>2016-10-19T22:13:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/responsive/</loc>
+    <lastmod>2013-12-20T00:28:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/shell/</loc>
+    <lastmod>2014-01-22T23:21:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/snap/</loc>
+    <lastmod>2015-03-10T13:41:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/sublime/</loc>
+    <lastmod>2015-01-19T23:42:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/svg/</loc>
+    <lastmod>2015-03-10T13:41:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/tomcat/</loc>
+    <lastmod>2014-03-31T00:32:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/vim/</loc>
+    <lastmod>2015-08-16T23:36:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/vsftpd/</loc>
+    <lastmod>2016-10-14T23:02:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/tags/zsh/</loc>
+    <lastmod>2014-01-22T23:21:32+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/categories/%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2016-10-14T23:02:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2016-03-26T23:12:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/categories/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2016-10-19T22:13:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.homfen.me/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2015-08-16T23:36:44+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

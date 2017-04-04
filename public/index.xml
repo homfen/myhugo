@@ -906,7 +906,7 @@ r = function(){
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;在load.js中可以对加载完的页面做任何操作&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;在load.js中可以对加载完的页面做任何操作HUGOMORE42&lt;/p&gt;
 
 &lt;p&gt;编写完成后，把这三个文件放在一个文件夹下，打开Chrome设置，选择左侧Extensions，点击“Load unpacked extension&amp;hellip;”按钮将前面的文件夹加载进来即可。&lt;/p&gt;
 

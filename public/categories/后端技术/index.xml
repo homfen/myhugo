@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>后端技术 on Homfen&#39;s blog</title>
+    <title>Homfen&#39;s blog</title>
     <link>http://blog.homfen.me/categories/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/index.xml</link>
-    <description>Recent content in 后端技术 on Homfen&#39;s blog</description>
+    <description>Recent content on Homfen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="http://blog.homfen.me/categories/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />

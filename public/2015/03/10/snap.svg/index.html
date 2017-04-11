@@ -117,20 +117,16 @@ element.node.addEventListener(&quot;click&quot;,function(){});//也可以用node
 <p>简单的介绍就到这里，其他内容请参考官方文档（不懂的只能百度谷歌了）。</p>
   </section>
   <section class="body" style="margin-top: 2rem;">
-    <div id="disqus_thread"></div>
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     <script>
-    var disqus_config = function () {
-        this.page.url = 'http:\/\/blog.homfen.me\/2015\/03\/10/Snap.svg';
-        this.page.identifier = 'Snap.svg';
-    };
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = '//homfensblog.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "ad61483be11b4fa5be94d4fbbb025e71",
+        target: "cloud-tie-wrapper"
+      };
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   </section>
 </article>
 

@@ -59,9 +59,9 @@
   </div>
   <h1 class="headline" itemprop="headline">Node.js命令行程序</h1>
   <section class="body" itemprop="articleBody">
-    <p>Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置。</p>
+    <p>Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置</p>
 
-<p>需要在package.json中添加如下配置：
+<p>需要在package.json中添加如下配置
 </p>
 
 <pre><code class="language-json">&quot;preferGlobal&quot;: true,
@@ -70,25 +70,30 @@
 }
 </code></pre>
 
-<p>preferGlobal的意思是适合全局安装。</p>
+<p>preferGlobal的意思是适合全局安装</p>
 
-<p>bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令。</p>
+<p>bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令</p>
 
 <p>入口文件的开头需要添加一行注释，声明用node去运行</p>
 
 <pre><code class="language-shell">#!/usr/bin/env node
 </code></pre>
 
-<p>其他功能和一般的node程序一样。</p>
+<p>其他功能和一般的node程序一样</p>
 
-<p>写完之后，运行全局安装</p>
+<p>写完之后，第一种方法是在程序目录下link</p>
+
+<pre><code class="language-shell">npm link
+</code></pre>
+
+<p>另一种发放是运行全局安装</p>
 
 <pre><code class="language-javascript">npm i -g ./folder
 </code></pre>
 
-<p>foler对应程序的目录。</p>
+<p>foler对应程序的目录</p>
 
-<p>安装完后，就可以在命令行中使用bin中的命令了。</p>
+<p>安装完后，就可以在命令行中使用bin中的命令了</p>
   </section>
   <section class="body" style="margin-top: 2rem;">
     <div id="disqus_thread"></div>

@@ -30,6 +30,11 @@
 
 &lt;p&gt;bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令。&lt;/p&gt;
 
+&lt;p&gt;入口文件的开头需要添加一行注释，声明用node去运行&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;#!/usr/bin/env node
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;其他功能和一般的node程序一样。&lt;/p&gt;
 
 &lt;p&gt;写完之后，运行全局安装&lt;/p&gt;

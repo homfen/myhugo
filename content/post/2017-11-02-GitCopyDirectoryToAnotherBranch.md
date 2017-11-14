@@ -14,5 +14,7 @@ tags = [
 ```bash
 git checkout master -- dirname
 ```
-
 <!--more-->
+
+这样就可以把master下的dirname目录复制到当前分支了
+

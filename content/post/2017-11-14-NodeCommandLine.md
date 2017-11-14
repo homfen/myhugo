@@ -10,9 +10,9 @@ tags = [
 ]
 +++
 
-Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置。
+Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置
 
-需要在package.json中添加如下配置：
+需要在package.json中添加如下配置
 <!--more-->
 
 ```json
@@ -22,9 +22,9 @@ Node.js也是可以写命令行程序的，与Web程序的不同之处就在于p
 }
 ```
 
-preferGlobal的意思是适合全局安装。
+preferGlobal的意思是适合全局安装
 
-bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令。
+bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令
 
 入口文件的开头需要添加一行注释，声明用node去运行
 
@@ -32,14 +32,20 @@ bin是一个对象，key是对应的命令行命令，value就是入口js文件�
 #!/usr/bin/env node
 ```
 
-其他功能和一般的node程序一样。
+其他功能和一般的node程序一样
 
-写完之后，运行全局安装
+写完之后，第一种方法是在程序目录下link
+
+```shell
+npm link
+```
+
+另一种发放是运行全局安装
 
 ```javascript
 npm i -g ./folder
 ```
 
-foler对应程序的目录。
+foler对应程序的目录
 
-安装完后，就可以在命令行中使用bin中的命令了。
+安装完后，就可以在命令行中使用bin中的命令了

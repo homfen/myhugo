@@ -6,8 +6,41 @@
     <description>Recent content on Homfen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Nov 2017 15:42:04 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 21:53:13 +0000</lastBuildDate>
     <atom:link href="http://blog.homfen.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Node.js命令行程序</title>
+      <link>http://blog.homfen.me/2017/11/14/node.js%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Tue, 14 Nov 2017 21:53:13 +0000</pubDate>
+      
+      <guid>http://blog.homfen.me/2017/11/14/node.js%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/</guid>
+      <description>&lt;p&gt;Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置。&lt;/p&gt;
+
+&lt;p&gt;需要在package.json中添加如下配置：
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;preferGlobal&amp;quot;: true,
+&amp;quot;bin&amp;quot;: {
+    &amp;quot;command&amp;quot;: &amp;quot;index.js&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;preferGlobal的意思是适合全局安装。&lt;/p&gt;
+
+&lt;p&gt;bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令。&lt;/p&gt;
+
+&lt;p&gt;其他功能和一般的node程序一样。&lt;/p&gt;
+
+&lt;p&gt;写完之后，运行全局安装&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;npm i -g ./folder
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;foler对应程序的目录。&lt;/p&gt;
+
+&lt;p&gt;安装完后，就可以在命令行中使用bin中的命令了。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>git把一个目录下的文件拷到另一个分支</title>
@@ -20,7 +53,9 @@
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout master -- dirname
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;这样就可以把master下的dirname目录复制到当前分支了&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -920,7 +955,7 @@ r = function(){
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;在load.js中可以对加载完的页面做任何操作&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;在load.js中可以对加载完的页面做任何操作HUGOMORE42&lt;/p&gt;
 
 &lt;p&gt;编写完成后，把这三个文件放在一个文件夹下，打开Chrome设置，选择左侧Extensions，点击“Load unpacked extension&amp;hellip;”按钮将前面的文件夹加载进来即可。&lt;/p&gt;
 
@@ -1044,41 +1079,6 @@ console.log(&amp;quot;loaded&amp;quot;);
 &lt;p&gt;完整的代码放在github上：&lt;a href=&#34;https://github.com/homfen/chrome-extension-demo&#34;&gt;https://github.com/homfen/chrome-extension-demo&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;所以开发一个Chrome插件也不难。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tomcat on Mavericks</title>
-      <link>http://blog.homfen.me/2014/03/31/tomcat-on-mavericks/</link>
-      <pubDate>Mon, 31 Mar 2014 00:32:25 +0000</pubDate>
-      
-      <guid>http://blog.homfen.me/2014/03/31/tomcat-on-mavericks/</guid>
-      <description>&lt;!--img src=&#34;http://blog.homfen.me/images/post/tomcat.jpeg&#34;--&gt;
-
-&lt;p&gt;在Mac上安装Tomcat非常简单 第一步，从&lt;a href=&#34;http://tomcat.apache.org/index.html&#34; target=&#34;_blank&#34;&gt;Tomcat&lt;/a&gt;官网下载压缩包，然后解压&lt;br /&gt;
-第二步，将解压好的文件夹重新命名一个简单的名字，复制到/Library目录下&lt;br /&gt;
-第三步，进入Tomcat下的bin目录中，设置startup.sh、shutdown.sh、catalina.sh三个文件的权限，添加执行权限，可以使用命令：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;chmod u+x 文件名
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;第四步，运行startup.sh，启动Tomcat，此时，如果设置正常，打开浏览器，输入localhost:8080就能看到Tomcat的欢迎页面，如果遇到错误，如：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;Exception in thread &amp;quot;main&amp;quot; java.lang.UnsupportedClassVersionError: org/apache/catalina/startup/Bootstrap : Unsupported major.minor version 51.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;是由于Tomcat版本与Mac上的Java版本不匹配。在终端中输入：java -version查看java版本，对应关系为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;tomcat version:8.0.x -------&amp;gt; java version:7 and later 
-tomcat version:7.0.x -------&amp;gt; java version:6 and later 
-tomcat version:6.0.x -------&amp;gt; java version:5 and later 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Mavericks默认java版本为1.6.0_65,如果想升级到7有一定的风险，因为7只能在64位浏览器下运行，而Mac上的Chrome只有32位&lt;/p&gt;
-
-&lt;p&gt;第五步：运行shutdown.sh，关闭Tomcat&lt;br /&gt;
-当然你也可以设置软链接，这样就能在终端中快速启动和关闭Tomcat&lt;/p&gt;</description>
     </item>
     
   </channel>

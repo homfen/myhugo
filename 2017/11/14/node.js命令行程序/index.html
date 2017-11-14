@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="http://blog.homfen.me/plugin/highlight/styles/solarized-dark.css">
 <link rel="stylesheet" href="http://blog.homfen.me/css/style.css" type="text/css">
 <link rel="alternate" href="http://blog.homfen.me/index.xml" type="application/rss+xml" title="Homfen&#39;s blog">
-<title>git把一个目录下的文件拷到另一个分支 - Homfen&#39;s blog</title>
+<title>Node.js命令行程序 - Homfen&#39;s blog</title>
 </head>
 <body>
 
@@ -35,7 +35,7 @@
   <div class="meta">
 
     <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2017-11-02">November 02, 2017</time></span>
+    <span class="val"><time itemprop="datePublished" datetime="2017-11-14">November 14, 2017</time></span>
 
 
     <span class="key">in</span>
@@ -50,28 +50,47 @@
     <span class="key">tags:</span>
     <span class="val">
 
-        <a href="http://blog.homfen.me/tags/git">Git</a>
+        <a href="http://blog.homfen.me/tags/node.js">Node.js</a>
+
+        <a href="http://blog.homfen.me/tags/commandline">Commandline</a>
 
     </span>
 
   </div>
-  <h1 class="headline" itemprop="headline">git把一个目录下的文件拷到另一个分支</h1>
+  <h1 class="headline" itemprop="headline">Node.js命令行程序</h1>
   <section class="body" itemprop="articleBody">
-    <p>就是这么一个奇葩的需求</p>
+    <p>Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置。</p>
 
-<pre><code class="language-bash">git checkout master -- dirname
+<p>需要在package.json中添加如下配置：
+</p>
+
+<pre><code class="language-json">&quot;preferGlobal&quot;: true,
+&quot;bin&quot;: {
+    &quot;command&quot;: &quot;index.js&quot;
+}
 </code></pre>
 
-<p></p>
+<p>preferGlobal的意思是适合全局安装。</p>
 
-<p>这样就可以把master下的dirname目录复制到当前分支了</p>
+<p>bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令。</p>
+
+<p>其他功能和一般的node程序一样。</p>
+
+<p>写完之后，运行全局安装</p>
+
+<pre><code class="language-javascript">npm i -g ./folder
+</code></pre>
+
+<p>foler对应程序的目录。</p>
+
+<p>安装完后，就可以在命令行中使用bin中的命令了。</p>
   </section>
   <section class="body" style="margin-top: 2rem;">
     <div id="disqus_thread"></div>
     <script>
     var disqus_config = function () {
-        this.page.url = 'http:\/\/blog.homfen.me\/2017\/11\/02/git把一个目录下的文件拷到另一个分支';
-        this.page.identifier = 'git把一个目录下的文件拷到另一个分支';
+        this.page.url = 'http:\/\/blog.homfen.me\/2017\/11\/14/Node.js命令行程序';
+        this.page.identifier = 'Node.js命令行程序';
     };
     (function() {
     var d = document, s = d.createElement('script');

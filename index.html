@@ -5,7 +5,7 @@
 <meta name="description" content="Welcome to my blog.">
 <meta name="keywords" content="">
 <meta name="author" content="">
-<meta name="generator" content="Hugo 0.17" />
+<meta name="generator" content="Hugo 0.19" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="http://blog.homfen.me/images/favicon.ico">
 <link rel="stylesheet" href="http://blog.homfen.me/css/sourcecodepro.css" type="text/css">
@@ -52,6 +52,24 @@
   </h1>
 
   <div class="article-list">
+    
+      
+<article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/2017/11/14/node.js%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/">Node.js命令行程序</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2017-11-14">November 14, 2017</time></span>
+
+  </div>
+  <section class="summary">
+    <p>Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置。</p>
+
+<p>需要在package.json中添加如下配置：
+</p>  <a href="/2017/11/14/node.js%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/">Read More...</a>
+  </section>
+</article>
+
     
       
 <article class="list-item" itemscope itemtype="http://schema.org/Blog">
@@ -102,33 +120,6 @@ ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 </article>
 
     
-      
-<article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/2016/10/14/vsftpd/">vsftpd</a></h2>
-  <div class="meta">
-
-    <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2016-10-14">October 14, 2016</time></span>
-
-  </div>
-  <section class="summary">
-    <p>在CentOS上安装vsftpd：</p>
-
-<pre><code class="language-bash">sudo yum install vsftpd
-</code></pre>
-
-<p>安装完毕后修改<code>/etc/vsftpd/vsftpd.conf</code>：</p>
-
-<pre><code class="language-yaml">anonymous_enable=NO
-local_enable=YES
-chroot_local_user=YES
-</code></pre>
-
-<p></p>  <a href="/2016/10/14/vsftpd/">Read More...</a>
-  </section>
-</article>
-
-    
   </div>
 
   <div class="all-posts">
@@ -143,7 +134,7 @@ chroot_local_user=YES
     
     <h2 class="category">
       <a href="http://blog.homfen.me/categories/%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF">其他技术</a>
-      <small>(7)</small>
+      <small>(8)</small>
     </h2>
     
     <h2 class="category">
@@ -187,6 +178,11 @@ chroot_local_user=YES
     </span>
     
     <span class="tag">
+      <a href="http://blog.homfen.me/tags/commandline">commandline</a>
+      <small>(1)</small>
+    </span>
+    
+    <span class="tag">
       <a href="http://blog.homfen.me/tags/express.js">express.js</a>
       <small>(1)</small>
     </span>
@@ -223,7 +219,7 @@ chroot_local_user=YES
     
     <span class="tag">
       <a href="http://blog.homfen.me/tags/node.js">node.js</a>
-      <small>(1)</small>
+      <small>(2)</small>
     </span>
     
     <span class="tag">

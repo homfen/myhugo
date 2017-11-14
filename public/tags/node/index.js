@@ -7,9 +7,9 @@
 <meta name="author" content="">
 <meta name="generator" content="Hugo 0.19" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/images/favicon.ico">
+<link rel="icon" href="http://blog.homfen.me/images/favicon.ico">
 <link rel="stylesheet" href="http://blog.homfen.me/css/sourcecodepro.css" type="text/css">
-<link rel="stylesheet" href="//static.homfen.me/plugin/highlight.js/dist/styles/solarized-dark.css">
+<link rel="stylesheet" href="http://blog.homfen.me/plugin/highlight/styles/solarized-dark.css">
 <link rel="stylesheet" href="http://blog.homfen.me/css/style.css" type="text/css">
 <link rel="alternate" href="http://blog.homfen.me/index.xml" type="application/rss+xml" title="Homfen&#39;s blog">
 <title>Node.Js - Homfen&#39;s blog</title>
@@ -54,6 +54,18 @@
         
             
 <h2 class="headline" itemprop="headline">
+    <a href="/2017/11/14/node.js%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/">Node.js命令行程序</a>
+    <div class="meta">
+    
+        <span class="key">published on</span>
+        <span class="val"><time itemprop="datePublished" datetime="2017-11-14">November 14, 2017</time></span>
+    
+    </div>
+</h2>
+
+        
+            
+<h2 class="headline" itemprop="headline">
     <a href="/2016/10/19/express.js-get-client-ip/">Express.js Get Client IP</a>
     <div class="meta">
     
@@ -78,7 +90,7 @@
   </div>
 </footer>
 
-<script src="//static.homfen.me/plugin/highlight.js/dist/highlight.pack.js"></script>
+<script src="http://blog.homfen.me/plugin/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>
 var _hmt = _hmt || [];

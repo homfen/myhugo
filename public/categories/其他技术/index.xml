@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homfen&#39;s blog</title>
+    <title>其他技术 on Homfen&#39;s blog</title>
     <link>http://blog.homfen.me/categories/%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF/index.xml</link>
-    <description>Recent content on Homfen&#39;s blog</description>
+    <description>Recent content in 其他技术 on Homfen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="http://blog.homfen.me/categories/%E5%85%B6%E4%BB%96%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Node.js命令行程序</title>
+      <link>http://blog.homfen.me/2017/11/14/node.js%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Tue, 14 Nov 2017 21:53:13 +0000</pubDate>
+      
+      <guid>http://blog.homfen.me/2017/11/14/node.js%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/</guid>
+      <description>&lt;p&gt;Node.js也是可以写命令行程序的，与Web程序的不同之处就在于package.json的设置。&lt;/p&gt;
+
+&lt;p&gt;需要在package.json中添加如下配置：
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;preferGlobal&amp;quot;: true,
+&amp;quot;bin&amp;quot;: {
+    &amp;quot;command&amp;quot;: &amp;quot;index.js&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;preferGlobal的意思是适合全局安装。&lt;/p&gt;
+
+&lt;p&gt;bin是一个对象，key是对应的命令行命令，value就是入口js文件，所以可以定义好几个命令。&lt;/p&gt;
+
+&lt;p&gt;其他功能和一般的node程序一样。&lt;/p&gt;
+
+&lt;p&gt;写完之后，运行全局安装&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;npm i -g ./folder
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;foler对应程序的目录。&lt;/p&gt;
+
+&lt;p&gt;安装完后，就可以在命令行中使用bin中的命令了。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>git把一个目录下的文件拷到另一个分支</title>
@@ -19,7 +52,9 @@
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout master -- dirname
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;这样就可以把master下的dirname目录复制到当前分支了&lt;/p&gt;</description>
     </item>
     
     <item>
